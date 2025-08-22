@@ -15,6 +15,7 @@
 
 locals {
   network = "${element(split("-", var.subnet), 0)}"
+
 }
 
 resource "google_compute_firewall" "allow-http" {
@@ -27,6 +28,6 @@ resource "google_compute_firewall" "allow-http" {
     ports    = ["80"]
   }
 
-  target_tags   = ["http-server2"]
+  target_tags   = ["http-server"]
   source_ranges = ["0.0.0.0/0"]
 }

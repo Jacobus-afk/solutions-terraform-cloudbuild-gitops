@@ -15,3 +15,6 @@
 
 variable "project" {}
 variable "subnet" {}
+variable "zone" {
+  default = "europe-west1-b"
+}
